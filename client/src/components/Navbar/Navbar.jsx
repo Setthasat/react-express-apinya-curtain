@@ -1,5 +1,6 @@
 import React from 'react';
 import { BiSolidUserCircle } from 'react-icons/bi';
+import './Navbar.css';
 
 
 function Navbar() {
@@ -8,12 +9,21 @@ function Navbar() {
             <div className=''>
                 <p>Apinya Curtain</p>
             </div>
-            <div className='flex justify-center items-center gap-[3rem]'>
-                <div>
-                    คำนวณพี้นที่
+            <div className='flex justify-center items-center'>
+                <div className='m-[2rem]'>
+                    <div className='border-[1.5px] px-2 border-black rounded-3xl '>
+                        <p className=''>คำนวณพี้นที่</p>
+                    </div>
                 </div>
-                <div>
-                    ชนิดของผ้าม่าน
+                <div className='m-[2rem]'>
+                    <div className='border-[1.5px] px-2 border-black rounded-3xl'>
+                        <p>ตัวอย่างงานติดตั้ง</p>
+                    </div>
+                </div>
+                <div className='m-[2rem]'>
+                    <div className='border-[1.5px] px-2 border-black rounded-3xl'>
+                        <p>ชนิดของผ้าม่าน</p>
+                    </div>
                 </div>
                 <div>
                     <p className='text-[2.5rem]'><BiSolidUserCircle /></p>
