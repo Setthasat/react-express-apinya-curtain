@@ -4,7 +4,11 @@ export default {
     './src/**/*.{js,jsx,ts,tsx}',
   ],
   theme: {
-    extend: {},
+    extend: {
+      boxShadow: {
+        'sidecard-shadow': '5px 5px 15px rgba(0, 0, 0, 0)',
+      },
+    },
   },
   plugins: [],
 }
