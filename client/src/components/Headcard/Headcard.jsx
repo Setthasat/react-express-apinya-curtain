@@ -27,12 +27,44 @@ function Headcard() {
           alt='HeadCard'
           className='w-full h-[52rem] rounded-[2rem] shadow-2xl'
           style={{
-            filter: "contrast(50%) brightness(70%)",
+            filter: "contrast(40%) brightness(60%)",
             position: 'relative',
             zIndex: 1,
           }}
         />
-        <motion.img src={SideCard1}
+        <motion.div
+          className='w-[30rem] h-[30rem] rounded-[2rem] shadow-2xl duration-[120ms] flex justify-center items-center'
+          style={{
+            position: 'absolute',
+            top: 372,
+            left: 1080,
+            zIndex: 1
+          }}
+          initial={{ x: coordinates.x, y: coordinates.y }}
+          animate={{ x: coordinates.x, y: coordinates.y }}
+        >
+          <img src={SideCard1} alt='SideCard' className='absolute rounded-[2rem] w-[30rem] h-[30rem]'
+            style={{ filter: "contrast(50%) brightness(70%)" }} />
+          <div className='absolute border p-4 rounded-2xl'>
+            <button className='text-white'>Learn more</button>
+          </div>
+        </motion.div>
+
+        <motion.div
+          className='w-[30rem] h-[30rem] rounded-[2rem] shadow-2xl duration-[120ms] flex justify-center items-center'
+          style={{
+            position: 'absolute',
+            top: -20,
+            right: 1080,
+            zIndex: 1
+          }}
+          initial={{ x: -coordinates.x, y: coordinates.y }}
+          animate={{ x: -coordinates.x, y: coordinates.y }}
+        >
+          <img src={SideCard2} alt='SideCard' className='w-[30rem] h-[30rem] absolute rounded-[2rem]'
+            style={{ filter: "contrast(50%) brightness(70%)" }} />
+        </motion.div>
+        {/* <motion.img src={SideCard1}
           alt='SideCard'
           className='w-[30rem] h-[30rem] rounded-[2rem] shadow-2xl duration-[120ms]'
           style={{
@@ -57,7 +89,7 @@ function Headcard() {
           }}
           initial={{ x: -coordinates.x, y: coordinates.y }}
           animate={{ x: -coordinates.x, y: coordinates.y }}
-        />
+        /> */}
       </div>
     </div>
   );
